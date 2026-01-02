@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تولید فاکتور VPN - erfwpbot</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔐 تولید فاکتور VPN</h1>
+            <div class="bot-info">
+                <p>🤖 ربات: <strong>@erfwpbot</strong></p>
+                <p>👤 آیدی: <strong>@erfcode</strong></p>
+            </div>
+        </header>
+
+        <main>
+            <div class="form-container">
+                <h2>اطلاعات فاکتور</h2>
+                <form id="invoiceForm">
+                    <div class="form-group">
+                        <label for="customerName">نام مشتری:</label>
+                        <input type="text" id="customerName" required placeholder="نام و نام خانوادگی">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="volume">حجم (گیگابایت):</label>
+                        <input type="number" id="volume" required placeholder="مثلا: 50" min="1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price">قیمت (تومان):</label>
+                        <input type="number" id="price" required placeholder="مثلا: 50000" min="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="duration">مدت زمان:</label>
+                        <select id="duration">
+                            <option value="1 ماهه">1 ماهه</option>
+                            <option value="2 ماهه">2 ماهه</option>
+                            <option value="3 ماهه">3 ماهه</option>
+                            <option value="6 ماهه">6 ماهه</option>
+                            <option value="1 ساله">1 ساله</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">توضیحات (اختیاری):</label>
+                        <textarea id="description" rows="3" placeholder="توضیحات اضافی..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-generate">تولید فاکتور</button>
+                </form>
+            </div>
+
+            <div id="invoicePreview" class="invoice-preview" style="display: none;">
+                <h2>پیش‌نمایش فاکتور</h2>
+                <div id="invoice" class="invoice">
+                    <div class="invoice-header">
+                        <div class="logo-section">
+                            <div class="logo">🔐 VPN</div>
+                            <h3>فاکتور خرید سرویس VPN</h3>
+                        </div>
+                        <div class="invoice-info">
+                            <p><strong>شماره فاکتور:</strong> <span id="invoiceNumber"></span></p>
+                            <p><strong>تاریخ:</strong> <span id="invoiceDate"></span></p>
+                        </div>
+                    </div>
+
+                    <div class="invoice-body">
+                        <div class="customer-info">
+                            <h4>اطلاعات مشتری</h4>
+                            <p><strong>نام:</strong> <span id="displayCustomerName"></span></p>
+                        </div>
+
+                        <div class="service-details">
+                            <h4>جزئیات سرویس</h4>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>شرح</th>
+                                        <th>مقدار</th>
+                                        <th>قیمت</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>سرویس VPN</td>
+                                        <td><span id="displayVolume"></span> گیگابایت - <span id="displayDuration"></span></td>
+                                        <td><span id="displayPrice"></span> تومان</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="description-section" id="descriptionSection" style="display: none;">
+                            <h4>توضیحات</h4>
+                            <p id="displayDescription"></p>
+                        </div>
+
+                        <div class="total-section">
+                            <p><strong>جمع کل:</strong> <span id="displayTotal"></span> تومان</p>
+                        </div>
+                    </div>
+
+                    <div class="invoice-footer">
+                        <div class="bot-contact">
+                            <p>🤖 ربات تلگرام: <strong>@erfwpbot</strong></p>
+                            <p>👤 آیدی پشتیبانی: <strong>@erfcode</strong></p>
+                        </div>
+                        <div class="thank-you">
+                            <p>از خرید شما متشکریم 🙏</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="saveImage" class="btn-save">💾 ذخیره به عنوان تصویر</button>
+                    <button id="newInvoice" class="btn-new">📝 فاکتور جدید</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2024 erfwpbot - تمامی حقوق محفوظ است</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

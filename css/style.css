@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Vazirmatn', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    direction: rtl;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+header h1 {
+    color: #667eea;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.bot-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.bot-info p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.bot-info strong {
+    color: #764ba2;
+}
+
+.form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+.form-container h2 {
+    color: #667eea;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.btn-generate {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-generate:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-generate:active {
+    transform: translateY(0);
+}
+
+.invoice-preview {
+    margin-top: 30px;
+}
+
+.invoice-preview h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.invoice {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.invoice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #667eea;
+}
+
+.logo-section {
+    flex: 1;
+}
+
+.logo {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.logo-section h3 {
+    color: #667eea;
+    font-size: 1.5em;
+}
+
+.invoice-info {
+    text-align: left;
+}
+
+.invoice-info p {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.invoice-body {
+    margin-bottom: 30px;
+}
+
+.customer-info,
+.service-details,
+.description-section {
+    margin-bottom: 25px;
+}
+
+.customer-info h4,
+.service-details h4,
+.description-section h4 {
+    color: #667eea;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.customer-info p,
+.description-section p {
+    color: #555;
+    line-height: 1.6;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+table th,
+table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+table th {
+    font-weight: bold;
+}
+
+table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.total-section {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.total-section p {
+    font-size: 1.4em;
+    color: #333;
+}
+
+.total-section strong {
+    color: #667eea;
+}
+
+.invoice-footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #e0e0e0;
+}
+
+.bot-contact {
+    margin-bottom: 15px;
+}
+
+.bot-contact p {
+    color: #555;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.thank-you {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.thank-you p {
+    color: #667eea;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-save,
+.btn-new {
+    flex: 1;
+    min-width: 200px;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-save {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    color: white;
+}
+
+.btn-save:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(17, 153, 142, 0.4);
+}
+
+.btn-new {
+    background: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%);
+    color: white;
+}
+
+.btn-new:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(238, 9, 121, 0.4);
+}
+
+footer {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .bot-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .invoice-header {
+        flex-direction: column;
+    }
+
+    .invoice-info {
+        text-align: right;
+        margin-top: 20px;
+    }
+
+    .invoice {
+        padding: 20px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .btn-save,
+    .btn-new {
+        width: 100%;
+    }
+
+    table th,
+    table td {
+        padding: 10px 5px;
+        font-size: 0.9em;
+    }
+}
+
+/* Print styles for better invoice printing */
+@media print {
+    body {
+        background: white;
+    }
+
+    .form-container,
+    .action-buttons,
+    footer {
+        display: none;
+    }
+
+    .invoice {
+        box-shadow: none;
+    }
+}
